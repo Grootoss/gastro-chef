@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
+import { asset } from "../../utils/asset";
 import styles from "./Promo.module.css";
 
 const slides = [
@@ -110,11 +111,17 @@ function Promo() {
   }
 
   return (
-    <section className={styles.section} aria-label="Промо">
-      <div
-        className={styles.visual}
-        aria-hidden="true"
-      />
+    <section
+      className={styles.section}
+      aria-label="Промо"
+      style={
+        {
+          "--food-tablet": `url(${asset("images/food-tablet.png")})`,
+          "--food-desktop": `url(${asset("images/food-desktop.png")})`,
+        } as CSSProperties
+      }
+    >
+      <div className={styles.visual} aria-hidden="true" />
 
       <ul className={styles.rail} aria-hidden="true">
         {rail.map((item) => (
@@ -185,7 +192,7 @@ function Promo() {
 
       <div className={styles.float}>
         <a className={styles.chat} href="#chat" aria-label="Открыть чат">
-          <img src="/images/chat.svg" alt="" width={28} height={28} />
+          <img src={asset("images/chat.svg")} alt="" width={28} height={28} />
           <span className={styles.badge}>1</span>
         </a>
         <div className={styles.socials}>
@@ -196,14 +203,14 @@ function Promo() {
             rel="noreferrer"
             aria-label="Telegram"
           >
-            <img src="/images/telegram.svg" alt="" width={20} height={20} />
+            <img src={asset("images/telegram.svg")} alt="" width={20} height={20} />
           </a>
           <a
             className={styles.social}
             href="#whatsapp"
             aria-label="WhatsApp"
           >
-            <img src="/images/whatsup.svg" alt="" width={20} height={20} />
+            <img src={asset("images/whatsup.svg")} alt="" width={20} height={20} />
           </a>
         </div>
       </div>

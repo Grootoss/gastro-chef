@@ -1,47 +1,48 @@
 import { useEffect, useRef } from "react";
+import { asset } from "../../utils/asset";
 import styles from "./FoodPhotos.module.css";
 
 const photos = [
   {
     id: 1,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-1.jpg",
-    desktop: "/images/food/food-desktop-1.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-1.jpg"),
+    desktop: asset("images/food/food-desktop-1.jpg"),
     alt: "Готовые рационы в контейнерах",
   },
   {
     id: 2,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-2.jpg",
-    desktop: "/images/food/food-desktop-2.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-2.jpg"),
+    desktop: asset("images/food/food-desktop-2.jpg"),
     alt: "Блюдо GastroChef с соусом",
   },
   {
     id: 3,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-3.jpg",
-    desktop: "/images/food/food-desktop-3.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-3.jpg"),
+    desktop: asset("images/food/food-desktop-3.jpg"),
     alt: "Detox смузи и готовые рационы",
   },
   {
     id: 4,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-2.jpg",
-    desktop: "/images/food/food-desktop-4.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-2.jpg"),
+    desktop: asset("images/food/food-desktop-4.jpg"),
     alt: "Лосось с брокколи и томатами",
   },
   {
     id: 5,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-3.jpg",
-    desktop: "/images/food/food-desktop-5.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-3.jpg"),
+    desktop: asset("images/food/food-desktop-5.jpg"),
     alt: "Курица гриль и салаты",
   },
   {
     id: 6,
-    mobile: "/images/food.png",
-    tablet: "/images/food/food-tablet-1.jpg",
-    desktop: "/images/food/food-desktop-6.jpg",
+    mobile: asset("images/food.png"),
+    tablet: asset("images/food/food-tablet-1.jpg"),
+    desktop: asset("images/food/food-desktop-6.jpg"),
     alt: "Салат с томатами и фетой",
   },
 ];

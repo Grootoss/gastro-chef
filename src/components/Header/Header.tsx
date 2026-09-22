@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { asset } from "../../utils/asset";
 import styles from "./Header.module.css";
 
 const navItems = [
@@ -22,7 +23,7 @@ function Header() {
     <header className={styles.header}>
       <div
         className={styles.elips}
-        style={{ backgroundImage: "url(/images/elips.jpg)" }}
+        style={{ backgroundImage: `url(${asset("images/elips.jpg")})` }}
         aria-hidden="true"
       />
 
@@ -32,7 +33,7 @@ function Header() {
         <Link to="/" className={styles.logo} aria-label="GastroChef — на главную">
           <img
             className={styles.logoMark}
-            src="/images/gastrochef-logo.svg"
+            src={asset("images/gastrochef-logo.svg")}
             alt=""
             width={165}
             height={69}
@@ -58,7 +59,7 @@ function Header() {
             href="tel:+779777723213"
             aria-label="Позвонить"
           >
-            <img src="/images/phone.svg" alt="" width={27} height={31} />
+            <img src={asset("images/phone.svg")} alt="" width={27} height={31} />
           </a>
 
           <button
@@ -66,7 +67,7 @@ function Header() {
             className={styles.circleBtn}
             aria-label="Открыть меню"
           >
-            <img src="/images/gamburger.svg" alt="" width={25} height={20} />
+            <img src={asset("images/gamburger.svg")} alt="" width={25} height={20} />
           </button>
         </div>
 
@@ -91,7 +92,7 @@ function Header() {
 
       <div className={styles.product}>
         <img
-          src="/images/header-product.jpg"
+          src={asset("images/header-product.jpg")}
           alt="Смузи GastroChef и авокадо"
           width={280}
           height={280}

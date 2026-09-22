@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { asset } from "../../utils/asset";
 import styles from "./Footer.module.css";
 
 const navLinks = [
@@ -14,25 +15,25 @@ const socials = [
     id: "instagram",
     href: "https://instagram.com/",
     label: "Instagram",
-    icon: "/images/instagram.svg",
+    icon: asset("images/instagram.svg"),
   },
   {
     id: "facebook",
     href: "https://facebook.com/",
     label: "Facebook",
-    icon: "/images/facebook.svg",
+    icon: asset("images/facebook.svg"),
   },
   {
     id: "whatsapp",
     href: "#whatsapp",
     label: "WhatsApp",
-    icon: "/images/whatsup.svg",
+    icon: asset("images/whatsup.svg"),
   },
   {
     id: "telegram",
     href: "https://t.me/",
     label: "Telegram",
-    icon: "/images/telegram.svg",
+    icon: asset("images/telegram.svg"),
   },
 ] as const;
 
@@ -52,7 +53,7 @@ function Footer() {
           <Link to="/" className={styles.brand} aria-label="GastroChef — на главную">
             <img
               className={styles.logo}
-              src="/images/gastrochef-logo.svg"
+              src={asset("images/gastrochef-logo.svg")}
               alt=""
               width={360}
               height={150}

@@ -1,0 +1,276 @@
+.section {
+  --order-green: #70d070;
+  --order-ink: #020202;
+  --order-muted: #6b6b6b;
+  --order-soft: #e8ecf0;
+  --order-error: #e88a8a;
+
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  box-sizing: border-box;
+  font-family: Roboto, system-ui, sans-serif;
+  color: var(--order-ink);
+  background: #f5f5f5;
+}
+
+.heading {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: var(--order-muted);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelOk,
+.labelError {
+  padding-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.labelOk {
+  color: var(--order-green);
+}
+
+.labelError {
+  color: var(--order-error);
+}
+
+.inputWrap {
+  position: relative;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  padding: 14px 48px 14px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--order-soft);
+  color: var(--order-ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  outline: none;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px rgba(112, 208, 112, 0.35);
+}
+
+.dotOk,
+.dotError {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.dotOk {
+  background: var(--order-green);
+}
+
+.dotError {
+  background: var(--order-error);
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+.checkMark {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(112, 208, 112, 0.35);
+  box-sizing: border-box;
+}
+
+.checkInput:checked + .checkMark {
+  background:
+    radial-gradient(
+      circle,
+      var(--order-green) 0 5px,
+      rgba(112, 208, 112, 0.35) 5.5px
+    );
+}
+
+.checkText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.link {
+  color: var(--order-green);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.btnOutline,
+.btnSolid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.btnOutline {
+  margin-top: 8px;
+  border: 2px solid var(--order-green);
+  background: transparent;
+  color: var(--order-green);
+}
+
+.btnSolid {
+  border: 0;
+  background: var(--order-green);
+  color: #fff;
+}
+
+.or {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 768px;
+    padding: 40px 24px 64px;
+    background: #fff;
+  }
+
+  .heading {
+    margin: 0 0 14px;
+    font-size: 32px;
+  }
+
+  .subtitle {
+    max-width: 36ch;
+    margin: 0 auto 32px;
+    font-size: 15px;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .input {
+    min-height: 54px;
+  }
+
+  .btnOutline,
+  .btnSolid {
+    min-height: 54px;
+  }
+
+  .btnSolid {
+    box-shadow: 0 10px 22px rgba(112, 208, 112, 0.4);
+  }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .heading {
+    margin: 0 0 12px;
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .subtitle {
+    max-width: none;
+    margin: 0 0 28px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .form {
+    max-width: none;
+    margin: 0;
+    gap: 18px;
+  }
+
+  .input {
+    min-height: 52px;
+  }
+
+  .btnOutline,
+  .btnSolid {
+    min-height: 52px;
+  }
+}
+

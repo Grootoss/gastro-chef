@@ -4,7 +4,12 @@ import { asset } from "../../utils/asset";
 import styles from "./Header.module.css";
 
 const navItems = [
-  { id: "programs", label: "Программы питания", href: "#programs", accent: false },
+  {
+    id: "programs",
+    label: "Программы питания",
+    href: "#programs",
+    accent: false,
+  },
   { id: "lunches", label: "Бизнес-ланчи", href: "#lunches", accent: false },
   { id: "shop", label: "Gastro Shop", href: "#shop", accent: true },
   { id: "about", label: "О нас", href: "#about", accent: false },
@@ -30,7 +35,11 @@ function Header() {
       <div className={styles.top}>
         <div className={styles.strip} aria-hidden="true" />
 
-        <Link to="/" className={styles.logo} aria-label="GastroChef — на главную">
+        <Link
+          to="/"
+          className={styles.logo}
+          aria-label="GastroChef — на главную"
+        >
           <img
             className={styles.logoMark}
             src={asset("images/gastrochef-logo.svg")}
@@ -56,10 +65,15 @@ function Header() {
         <div className={styles.actions}>
           <a
             className={styles.circleBtn}
-            href="tel:+779777723213"
+            href="tel:+70000000000"
             aria-label="Позвонить"
           >
-            <img src={asset("images/phone.svg")} alt="" width={27} height={31} />
+            <img
+              src={asset("images/phone.svg")}
+              alt=""
+              width={27}
+              height={31}
+            />
           </a>
 
           <button
@@ -67,12 +81,17 @@ function Header() {
             className={styles.circleBtn}
             aria-label="Открыть меню"
           >
-            <img src={asset("images/gamburger.svg")} alt="" width={25} height={20} />
+            <img
+              src={asset("images/gamburger.svg")}
+              alt=""
+              width={25}
+              height={20}
+            />
           </button>
         </div>
 
-        <a className={styles.phonePill} href="tel:+779777723213">
-          +7 797 777 23 213
+        <a className={styles.phonePill} href="tel:+70000000000">
+          +7 000 000 00 000
         </a>
       </div>
 

@@ -1,16 +1,13 @@
 .section {
-  --promo-green: #70d070;
-  --promo-ink: #020202;
-
   position: relative;
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 8px 20px 48px;
   box-sizing: border-box;
-  font-family: Roboto, system-ui, sans-serif;
-  color: var(--promo-ink);
-  background: #f5f5f5;
+  color: var(--color-ink);
+  background: var(--color-surface);
   overflow: hidden;
 }
 
@@ -33,7 +30,7 @@
 }
 
 .title {
-  margin: 0 0 14px;
+  margin-bottom: 14px;
   max-width: 18ch;
   font-size: 28px;
   font-weight: 700;
@@ -41,11 +38,11 @@
 }
 
 .title span {
-  color: var(--promo-green);
+  color: var(--color-green);
 }
 
 .text {
-  margin: 0 0 22px;
+  margin-bottom: 22px;
   max-width: 22ch;
   font-size: 15px;
   font-weight: 400;
@@ -53,7 +50,7 @@
 }
 
 .text span {
-  color: var(--promo-green);
+  color: var(--color-green);
 }
 
 .order {
@@ -62,22 +59,24 @@
   justify-content: center;
   min-width: 168px;
   height: 52px;
-  padding: 0 36px;
+  padding-right: 36px;
+  padding-left: 36px;
   border-radius: 999px;
-  background: var(--promo-green);
-  color: #fff;
+  background: var(--color-green);
+  color: var(--color-white);
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
-  box-shadow: 0 10px 22px rgba(112, 208, 112, 0.45);
+  box-shadow: 0 10px 22px var(--color-green-glow);
 }
 
 .priceRow {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin: 22px 0 28px;
+  margin-top: 22px;
+  margin-bottom: 28px;
 }
 
 .priceLabel {
@@ -87,7 +86,7 @@
 }
 
 .price {
-  color: var(--promo-green);
+  color: var(--color-green);
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
@@ -109,7 +108,7 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--promo-green);
+  color: var(--color-green);
   cursor: pointer;
 }
 
@@ -130,7 +129,7 @@
   display: block;
   box-sizing: border-box;
   border-radius: 50%;
-  background: var(--promo-green);
+  background: var(--color-green);
 }
 
 .dot {
@@ -141,7 +140,7 @@
 .dotActive {
   width: 14px;
   height: 14px;
-  border: 2px solid var(--promo-green);
+  border: 2px solid var(--color-green);
   background: transparent;
 }
 
@@ -164,8 +163,8 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(2, 2, 2, 0.14);
+  background: var(--color-white);
+  box-shadow: 0 8px 20px var(--color-shadow-card);
   text-decoration: none;
 }
 
@@ -183,8 +182,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #020202;
-  color: #fff;
+  background: var(--color-ink);
+  color: var(--color-white);
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
@@ -204,9 +203,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #020202;
+  background: var(--color-ink);
   text-decoration: none;
-  box-shadow: 0 6px 14px rgba(2, 2, 2, 0.16);
+  box-shadow: 0 6px 14px var(--color-shadow-deep);
 }
 
 .social img {
@@ -232,7 +231,8 @@
     min-height: 600px;
     margin-top: -160px;
     padding: 180px 20px 120px 88px;
-    background: #fff;
+    overflow: visible;
+    background: var(--color-white);
   }
 
   .visual {
@@ -242,12 +242,12 @@
     right: -48px;
     z-index: 0;
     width: 580px;
-    height: 100%;
-    min-height: 640px;
+    height: auto;
+    aspect-ratio: 476 / 779;
     background-image: var(--food-tablet);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: cover;
+    background-size: contain;
     pointer-events: none;
   }
 
@@ -271,9 +271,9 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 6px 14px rgba(2, 2, 2, 0.1);
-    color: #7a7a7a;
+    background: var(--color-white);
+    box-shadow: 0 6px 14px var(--color-shadow);
+    color: var(--color-muted-dim);
   }
 
   .railItem svg {
@@ -311,7 +311,8 @@
   }
 
   .priceRow {
-    margin: 18px 0 22px;
+    margin-top: 18px;
+    margin-bottom: 22px;
   }
 
   .price {
@@ -327,8 +328,8 @@
     width: 150px;
     padding: 10px 12px;
     border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(2, 2, 2, 0.12);
+    background: var(--color-white);
+    box-shadow: 0 8px 20px var(--color-shadow-lift);
     font-size: 11px;
     font-weight: 400;
     line-height: 1.35;
@@ -356,10 +357,11 @@
   .visual {
     right: 0;
     width: 55%;
-    min-height: 860px;
+    height: auto;
+    aspect-ratio: 1121 / 1371;
     background-image: var(--food-desktop);
-    background-position: center top;
-    background-size: cover;
+    background-position: right top;
+    background-size: contain;
   }
 
   .rail {

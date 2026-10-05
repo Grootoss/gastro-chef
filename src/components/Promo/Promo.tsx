@@ -84,8 +84,7 @@ function RailIcon({ id }: { id: (typeof rail)[number]["id"] }) {
       "M12 3c1 2 1 3 0 5 3 1 5 4 5 7-3 0-6-1-8-3-2 2-5 3-8 3 0-3 2-6 5-7-1-2-1-3 0-5l3 1 3-1z",
     water: "M9 3h6v2l2 3v9a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V8l2-3V3zm1 7h4",
     meat: "M5 10c0-3 3-5 7-5s7 2 7 5-3 7-7 7-7-4-7-7zm3.5-.5h1v1h-1zm5 0h1v1h-1z",
-    scale:
-      "M5 7h14v2l-2 1v7H7v-7L5 9V7zm7 0V4m-3 13h6M9 10h6",
+    scale: "M5 7h14v2l-2 1v7H7v-7L5 9V7zm7 0V4m-3 13h6M9 10h6",
   };
 
   return (
@@ -107,7 +106,9 @@ function Promo() {
   const slide = slides[index];
 
   function go(direction: -1 | 1) {
-    setIndex((current) => (current + direction + slides.length) % slides.length);
+    setIndex(
+      (current) => (current + direction + slides.length) % slides.length,
+    );
   }
 
   return (
@@ -186,8 +187,7 @@ function Promo() {
       </div>
 
       <aside className={styles.tip}>
-        Мы онлайн! Консультация и -30% в чате.{" "}
-        <strong>Без звонка!</strong>
+        Мы онлайн! Консультация и -30% в чате. <strong>Без звонка!</strong>
       </aside>
 
       <div className={styles.float}>
@@ -203,14 +203,20 @@ function Promo() {
             rel="noreferrer"
             aria-label="Telegram"
           >
-            <img src={asset("images/telegram.svg")} alt="" width={20} height={20} />
+            <img
+              src={asset("images/telegram.svg")}
+              alt=""
+              width={20}
+              height={20}
+            />
           </a>
-          <a
-            className={styles.social}
-            href="#whatsapp"
-            aria-label="WhatsApp"
-          >
-            <img src={asset("images/whatsup.svg")} alt="" width={20} height={20} />
+          <a className={styles.social} href="#whatsapp" aria-label="WhatsApp">
+            <img
+              src={asset("images/whatsup.svg")}
+              alt=""
+              width={20}
+              height={20}
+            />
           </a>
         </div>
       </div>

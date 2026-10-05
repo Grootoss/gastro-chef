@@ -12,7 +12,7 @@ function isPhoneValid(value: string) {
 
 function Order() {
   const [name, setName] = useState("Ольга");
-  const [phone, setPhone] = useState("7979992231");
+  const [phone, setPhone] = useState("70000000000");
   const [testDay, setTestDay] = useState(true);
   const [agree, setAgree] = useState(true);
 
@@ -32,9 +32,7 @@ function Order() {
         onSubmit={(event) => event.preventDefault()}
       >
         <label className={styles.field}>
-          <span
-            className={nameOk ? styles.labelOk : styles.labelError}
-          >
+          <span className={nameOk ? styles.labelOk : styles.labelError}>
             Имя
           </span>
           <span className={styles.inputWrap}>
@@ -54,9 +52,7 @@ function Order() {
         </label>
 
         <label className={styles.field}>
-          <span
-            className={phoneOk ? styles.labelOk : styles.labelError}
-          >
+          <span className={phoneOk ? styles.labelOk : styles.labelError}>
             Номер телефона
           </span>
           <span className={styles.inputWrap}>

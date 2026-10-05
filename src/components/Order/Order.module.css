@@ -1,22 +1,16 @@
 .section {
-  --order-green: #70d070;
-  --order-ink: #020202;
-  --order-muted: #6b6b6b;
-  --order-soft: #e8ecf0;
-  --order-error: #e88a8a;
-
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 24px 20px 48px;
   box-sizing: border-box;
-  font-family: Roboto, system-ui, sans-serif;
-  color: var(--order-ink);
-  background: #f5f5f5;
+  color: var(--color-ink);
+  background: var(--color-surface);
 }
 
 .heading {
-  margin: 0 0 12px;
+  margin-bottom: 12px;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
@@ -24,8 +18,8 @@
 }
 
 .subtitle {
-  margin: 0 0 28px;
-  color: var(--order-muted);
+  margin-bottom: 28px;
+  color: var(--color-muted-mid);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.45;
@@ -53,11 +47,11 @@
 }
 
 .labelOk {
-  color: var(--order-green);
+  color: var(--color-green);
 }
 
 .labelError {
-  color: var(--order-error);
+  color: var(--color-error);
 }
 
 .inputWrap {
@@ -72,8 +66,8 @@
   padding: 14px 48px 14px 22px;
   border: 0;
   border-radius: 999px;
-  background: var(--order-soft);
-  color: var(--order-ink);
+  background: var(--color-field);
+  color: var(--color-ink);
   font: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -82,7 +76,7 @@
 }
 
 .input:focus {
-  box-shadow: 0 0 0 2px rgba(112, 208, 112, 0.35);
+  box-shadow: 0 0 0 2px var(--color-green-soft);
 }
 
 .dotOk,
@@ -98,11 +92,11 @@
 }
 
 .dotOk {
-  background: var(--order-green);
+  background: var(--color-green);
 }
 
 .dotError {
-  background: var(--order-error);
+  background: var(--color-error);
 }
 
 .check {
@@ -130,17 +124,16 @@
   height: 22px;
   margin-top: 1px;
   border-radius: 50%;
-  background: rgba(112, 208, 112, 0.35);
+  background: var(--color-green-soft);
   box-sizing: border-box;
 }
 
 .checkInput:checked + .checkMark {
-  background:
-    radial-gradient(
-      circle,
-      var(--order-green) 0 5px,
-      rgba(112, 208, 112, 0.35) 5.5px
-    );
+  background: radial-gradient(
+    circle,
+    var(--color-green) 0 5px,
+    var(--color-green-soft) 5.5px
+  );
 }
 
 .checkText {
@@ -150,7 +143,7 @@
 }
 
 .link {
-  color: var(--order-green);
+  color: var(--color-green);
   text-decoration: none;
 }
 
@@ -177,15 +170,15 @@
 
 .btnOutline {
   margin-top: 8px;
-  border: 2px solid var(--order-green);
+  border: 2px solid var(--color-green);
   background: transparent;
-  color: var(--order-green);
+  color: var(--color-green);
 }
 
 .btnSolid {
   border: 0;
-  background: var(--order-green);
-  color: #fff;
+  background: var(--color-green);
+  color: var(--color-white);
 }
 
 .or {
@@ -201,24 +194,27 @@
   .section {
     max-width: 768px;
     padding: 40px 24px 64px;
-    background: #fff;
+    background: var(--color-white);
   }
 
   .heading {
-    margin: 0 0 14px;
+    margin-bottom: 14px;
     font-size: 32px;
   }
 
   .subtitle {
     max-width: 36ch;
-    margin: 0 auto 32px;
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-left: auto;
     font-size: 15px;
   }
 
   .form {
     width: 100%;
     max-width: 420px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     gap: 20px;
   }
 
@@ -232,7 +228,7 @@
   }
 
   .btnSolid {
-    box-shadow: 0 10px 22px rgba(112, 208, 112, 0.4);
+    box-shadow: 0 10px 22px var(--color-green-glow-soft);
   }
 }
 
@@ -246,14 +242,16 @@
   }
 
   .heading {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
     font-size: 32px;
     text-align: left;
   }
 
   .subtitle {
     max-width: none;
-    margin: 0 0 28px;
+    margin-right: 0;
+    margin-bottom: 28px;
+    margin-left: 0;
     font-size: 15px;
     text-align: left;
   }
@@ -273,4 +271,3 @@
     min-height: 52px;
   }
 }
-

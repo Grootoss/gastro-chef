@@ -50,7 +50,11 @@ function Footer() {
         </nav>
 
         <div className={styles.brandBlock}>
-          <Link to="/" className={styles.brand} aria-label="GastroChef — на главную">
+          <Link
+            to="/"
+            className={styles.brand}
+            aria-label="GastroChef — на главную"
+          >
             <img
               className={styles.logo}
               src={asset("images/gastrochef-logo.svg")}
@@ -88,8 +92,8 @@ function Footer() {
             ))}
           </ul>
 
-          <a className={styles.phone} href="tel:+779777723213">
-            +7 797 777 23 213
+          <a className={styles.phone} href="tel:+70000000000">
+            +7 000 000 00 000
           </a>
         </div>
       </div>

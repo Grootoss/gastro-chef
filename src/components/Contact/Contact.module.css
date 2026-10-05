@@ -11,6 +11,6 @@
     box-sizing: border-box;
     width: 100%;
     padding: 64px 315px 80px;
-    background: #fff;
+    background: var(--color-white);
   }
 }
